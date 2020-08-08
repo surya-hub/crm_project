@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>status</title>
+</head>
+<body>
+<style>
+    .card{
+        margin-top: 20px
+    }
+</style>
+{% block content %}
+    <div class="container-fluid">
+    <div class="row">
+        <div class="col-md">
+            <div class="card">
+                <div class="card-header bg-primary text-center text-white">
+                    <h5>Totel Orders</h5>
+                </div>
+                <div class="card-body text-center">
+                    <h5>{{ totel_orders }}</h5>
+                </div>
+            </div>
+        </div>
+        <div class="col-md">
+            <div class="card">
+                <div class="card-header bg-info text-center text-white">
+                    <h5>Pending Orders</h5>
+                </div>
+                <div class="card-body text-center">
+                    <h5>{{ pending }}</h5>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-md">
+            <div class="card">
+                <div class="card-header bg-success text-center text-white">
+                    <h5>Delivery Orders</h5>
+                </div>
+                <div class="card-body text-center">
+                    <h5>{{ deliver }}</h5>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="col-md">
+            <div class="card">
+                <div class="card-header bg-secondary text-center text-white">
+                    <h5>Outfor Delivery</h5>
+                </div>
+                <div class="card-body text-center">
+                    <h5>{{ outdel }}</h5>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    </div>
+{% endblock %}
+
+</body>
+</html>

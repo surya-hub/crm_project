@@ -1,0 +1,44 @@
+{% extends 'accounts/base.html' %}
+<html>
+<head>
+    <title>products</title>
+</head>
+<body>
+{% block content %}
+    <h1 class="text-center" >Products</h1>
+    <center>
+    <a href="{% url 'add_product' %}"  class="b btn btn-success">Add Product</a>
+    </center>
+    <table class="table table-bordered text-center">
+    <thead class="bg-info">
+    <tr>
+        <td>Product Name</td>
+        <td>Product Cost</td>
+        <td>Description</td>
+        <td>Manuf. Date</td>
+        <td>Category</td>
+        <td>Actions</td>
+    </tr>
+    </thead>
+    <tbody>
+    {% for i in products %}
+        <tr>
+            <td>{{ i.name }}</td>
+            <td>{{ i.price }}</td>
+            <td>{{ i.description }}</td>
+            <td>{{ i.order_date }}</td>
+            <td>{{ i.category }}</td>
+            <td>
+                <a href="{% url 'update_product' i.id %}" class="u btn btn-success">Update</a>
+                <a href="{% url 'delete_product' i.id %}" class="d btn btn-danger">Delete</a>
+
+            </td>
+        </tr>
+    {% endfor %}
+
+    </tbody>
+    </table>
+
+{% endblock %}
+</body>
+</html>

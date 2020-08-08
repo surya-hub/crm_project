@@ -1,0 +1,177 @@
+/*--------------navbar -------------*/
+
+h1{
+  font-size:90px;
+  margin-left:40px;
+  padding:0;
+  text-align: center;
+  text-shadow: 5px 5px 3px #50C7C7;
+  font-family: 'Oswald', sans-serif;
+  color:#E6D307
+
+}
+body{
+    margin: 0;
+    padding: 0;
+
+}
+img{
+  width: 10%;
+  height: 10%;
+  border-radius: 60%
+}
+#im{
+  margin-left:65px;
+}
+#imi{
+  margin-right: 40px;
+}
+li{
+  margin-left: 60px;
+}
+
+.nav-link:hover{
+
+  border-radius: 20%;
+  background-color: #11D496;
+}
+
+nav{
+  border: 1px green solid;
+}
+
+
+
+
+/*----------logout , user----------*/
+
+#logout
+{
+  border: 1px solid green;
+  background-color: magenta;
+  color: white;
+  border-radius: 20px;
+}
+#logout:hover{
+  background-color: darkgrey;
+}
+#user1{
+  color: cornsilk;
+  font-size: 20px;
+  margin-right: 20px;
+}
+
+
+/*---------Dashboard---------*/
+
+.b {
+  padding: 5px 15px;
+  font-size: 15px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  border: none;
+  background-color: #401A63;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.b:hover {
+  background-color:#1A8234;
+
+}
+.jumbotron{
+    padding: 0;
+}
+
+.u {
+  padding: 5px 15px;
+  font-size: 15px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color:red;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 5px #401A63;
+}
+
+.u:hover {
+  background-color:#1A8234;
+
+}
+.d {
+
+  padding: 5px 15px;
+  font-size: 15px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color:#401A63;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 5px #401A63;
+}
+.table{
+  margin-top: 20px;
+}
+
+
+/*------add_product-------*/
+
+.aform{
+  border: 1px solid black;
+  padding: 20px;
+  margin-top: 30px;
+  border-radius: 10%;
+}
+
+.he{
+    padding-bottom: 30px;
+}
+
+
+
+/*---------Login_Page--------*/
+
+.user-card{
+        width: 400px;
+        margin-top: 150px;
+        margin-bottom: auto;
+
+    /*{#position: relative;#}*/
+    /*{#justify-content: center;#}*/
+    /*{#flex-direction: column;#}*/
+        padding: 10px;
+        background-color:#3E4F4F;
+        border-radius: 10px;
+        border: 1px solid black;
+    }
+    .form-container{
+        margin-top: 20px;
+    }
+    .input-group-text{
+        background: #f7ba5b;
+        color: white;
+    }
+    .input-group{
+        margin-top: 5px;
+        border: 1px solid black;
+        border-radius: 50%;
+    }
+    #msg1{
+        background-color: grey;
+        color: red;
+        text-align: center;
+    }
+
+
+
+    /*_______Register-------*/
+

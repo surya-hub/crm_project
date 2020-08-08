@@ -1,0 +1,33 @@
+{% extends 'accounts/base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update Product</title>
+</head>
+<body>
+{%  block content %}
+    <div class="container">
+    <div class="row">
+        <div class="offset-md-3 col-md-6">
+            <form method="POST" class="aform">
+                {% csrf_token %}
+                <input type="text" name="name" class="form-control" placeholder="Product Name" value="{{ product.name }}"><br>
+                <input type="text" name="price" class="form-control" placeholder="Product Cost" value="{{ product.price }}"><br>
+                <input type="text" name="des" class="form-control" placeholder="Product Description" value="{{ product.description }}"><br>
+                <label>Category:&ensp;</label>
+                <select name="cat">
+                    <option >OUTDOOR</option>
+                    <option>INDOOR</option>
+                    <option>ANYWHERE</option>
+                </select>
+                <center>
+                <input type="submit" value="Update" class="btn btn-success">
+                </center>
+            </form>
+        </div>
+    </div>
+    </div>
+{% endblock %}
+</body>
+</html>

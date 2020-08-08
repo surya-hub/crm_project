@@ -1,0 +1,58 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="{% static "CSS/navbar.css" %}">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&displa=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" rel="stylesheet">
+
+</head>
+<body>
+{% block content %}
+
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+
+    <img src="{% static 'images/pic2.jpg' %}" id="imi" alt="no image">
+      <h1><b>SURYA ONLINE SERVICES</b></h1>
+      <img src="{% static 'images/pic.jpg' %}" id="im" alt="no image">
+
+    </nav>
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+    <a class="navbar-brand nav-link" href="{% url 'home' %}">Dashboard</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+        <ul class="navbar-nav">
+            {% if request.user.is_staff %}
+                <li class="nav-item active">
+                    <a class="nav-link" href="{% url 'products' %}">Products</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href={% url 'orders' %}>Orders</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href={% url 'all_customers' %}>Customers</a>
+                </li>
+            {% else %}
+                <a id="profile" href="#" class="text-white"><u><b>My Profile</b></u></a>
+            {% endif %}
+        </ul>
+    </div>
+    <b id="user1">Hello, {{ request.user|capfirst }}</b>
+    <a class="nav-link" id="logout" href="{% url 'logout' %}">Logout</a>
+</nav>
+{% endblock %}
+</body>
+</html>

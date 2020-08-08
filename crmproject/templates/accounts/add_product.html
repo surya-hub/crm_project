@@ -1,0 +1,33 @@
+{% extends 'accounts/base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Product</title>
+</head>
+<body>
+{% block content %}
+    <div class="container">
+    <div class="row">
+        <div class="offset-md-3 col-md-6">
+            <form method="POST" class="aform">
+                {% csrf_token %}
+                <input type="text" name="name" class="form-control" placeholder="Product Name"><br>
+                <input type="text" name="price" class="form-control" placeholder="Product Cost"><br>
+                <input type="text" name="des" class="form-control" placeholder="Product Description"><br>
+                <label>Category:&ensp;</label>
+                <select name="cat">
+                    <option>Outdoor</option>
+                    <option>Indoor</option>
+                    <option>Anywhere</option>
+                </select>
+                <center>
+                <input type="submit" value="ADD" class="btn btn-success">
+                </center>
+            </form>
+        </div>
+    </div>
+    </div>
+{% endblock %}
+</body>
+</html>

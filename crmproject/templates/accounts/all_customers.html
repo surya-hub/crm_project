@@ -1,0 +1,36 @@
+{% extends 'accounts/base.html' %}
+<html>
+<head>
+    <title>All Customers</title>
+</head>
+<body>
+{% block content %}
+<h1 class="text-center">Customers</h1>
+    <table class="table table-bordered text-center">
+    <thead class="bg-info">
+    <tr>
+        <td>First Name</td>
+        <td>Last Name</td>
+        <td>Email</td>
+        <td>Mobile</td>
+        <td>Register Date</td>
+        <td>Location</td>
+    </tr>
+    </thead>
+    <tbody>
+    {% for i in all_customers %}
+        <tr>
+            <td>{{ i.first_name }}</td>
+            <td>{{ i.last_name }}</td>
+            <td>{{ i.email }}</td>
+            <td>{{ i.mobile }}</td>
+            <td>{{ i.create_date }}</td>
+            <td>{{ i.location }}</td>
+        </tr>
+    {% endfor %}
+
+    </tbody>
+    </table>
+{% endblock %}
+</body>
+</html>

@@ -1,0 +1,43 @@
+{% extends 'accounts/base.html' %}
+<html>
+<head>
+    <title>Orders</title>
+</head>
+<body>
+{% block content %}
+    <h1 class="text-center" >Orders</h1>
+    <table class="table table-bordered text-center order">
+        <thead class="text-white bg-secondary">
+        <tr>
+            <th>Product Name</th>
+            <th>Product Price</th>
+            <th>Order By</th>
+            <th>Description</th>
+            <th>Status</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% if all_orders %}
+            {% for i in all_orders %}
+                <tr>
+                    <td>{{ i.product.name }}</td>
+                    <td>{{ i.product.price }}</td>
+                    <td>{{ i.customer.first_name|capfirst }}</td>
+                    <td>{{ i.created_date }}</td>
+                    <td>{{ i.status }}</td>
+                    <td>
+                        <a href="#" class="btn btn-success">Update</a>
+                        <a href="#" class="btn btn-danger">Delete</a>
+
+                    </td>
+                </tr>
+            {% endfor %}
+        {% else %}
+            <h1> No Orders</h1>
+        {% endif %}
+        </tbody>
+    </table>
+{% endblock %}
+</body>
+</html>
